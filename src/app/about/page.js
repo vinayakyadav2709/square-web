@@ -41,11 +41,11 @@ const AboutPage = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6"
                     >
-                        Our Story: Building for the <span className="text-primary">Glass Industry</span>
+                        Our Story: Building for the <span className="text-primary">Whole Industry</span>
                     </motion.h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Square Glass started with a simple observation: glass wholesalers were struggling
-                        with complex unit conversions and generic accounting tools. We decided to change that.
+                        कारोbaar started with a simple observation: wholesalers were struggling
+                        with complex calculations and generic accounting tools. We decided to change that.
                     </p>
                 </div>
 
@@ -74,8 +74,8 @@ const AboutPage = () => {
                     <div>
                         <h2 className="text-3xl md:text-5xl font-bold mb-6">Designed by Developers, Built for Wholesale</h2>
                         <p className="text-xl text-primary-foreground/90 leading-relaxed mb-8">
-                            We spent months visiting glass shops and warehouses to understand the real-world
-                            challenges of inventory management. Every feature in Square Glass is a direct
+                            We spent months visiting various shops and warehouses to understand the real-world
+                            challenges of inventory management. Every feature in कारोbaar is a direct
                             response to those conversations.
                         </p>
                         <div className="flex gap-4">

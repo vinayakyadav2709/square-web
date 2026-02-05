@@ -16,8 +16,8 @@ import Footer from "@/components/layout/Footer";
 import { Toaster } from "sonner";
 
 export const metadata = {
-  title: "Square Glass | Modern Accounting for Glass Wholesalers",
-  description: "Simplify your glass and aluminum business with Square Glass. Master units, GST invoices, and real-time inventory management.",
+  title: "कारोbaar | Modern Accounting for Wholesalers",
+  description: "Simplify your wholesale business with कारोbaar. Master units, GST invoices, and real-time inventory management.",
 };
 
 export default function RootLayout({ children }) {

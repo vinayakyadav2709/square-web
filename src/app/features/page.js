@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { APP_LINKS } from "@/constants/links";
 
 const detailedFeatures = [
     {
@@ -24,7 +25,7 @@ const detailedFeatures = [
     },
     {
         title: "Multi-Category Inventory",
-        description: "Whether you're selling float glass, mirror, aluminum sections, or hardware fittings, Square Glass handles it all with specialized templates for each category.",
+        description: "Whether you're selling glass, aluminum sections, hardware fittings, or other wholesale items, कारोbaar handles it all with specialized templates for each category.",
         icon: Layers,
         color: "bg-green-500",
         details: ["Glass & Mirror", "Aluminum Sections", "Hardware Fittings", "Custom Categories"],
@@ -58,8 +59,8 @@ const FeaturesPage = () => {
                         Powerful Features for <span className="text-primary">Modern Wholesalers</span>
                     </motion.h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                        Every tool in Square Glass is meticulously designed to solve the real-world
-                        bottlenecks in the glass and aluminum industry.
+                        Every tool in कारोbaar is meticulously designed to solve the real-world
+                        bottlenecks in the wholesale industry.
                     </p>
                 </div>
 
@@ -119,10 +120,10 @@ const FeaturesPage = () => {
                     </h2>
                     <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
                         Take the first step towards a more efficient, error-free, and profitable
-                        glass business. Download the app now.
+                        wholesale business. Download the app now.
                     </p>
                     <div className="flex justify-center">
-                        <Link href="https://play.google.com/store/apps/details?id=com.squareglass.app" target="_blank">
+                        <Link href={APP_LINKS.PLAY_STORE} target="_blank">
                             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-xl h-16 px-12 rounded-2xl font-bold">
                                 Go to Play Store
                             </Button>

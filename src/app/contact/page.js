@@ -22,8 +22,8 @@ const ContactPage = () => {
                                 Let's Build Something <span className="text-primary">Great Together</span>
                             </h1>
                             <p className="text-xl text-gray-600 mb-12 leading-relaxed">
-                                Whether you have a question about features, pricing, or need a custom demo,
-                                our team is ready to help your glass business scale.
+                                Whether you have a question about features or need a custom demo,
+                                our team is ready to help your business scale with कारोbaar.
                             </p>
 
                             <div className="space-y-8 mb-12">
@@ -33,7 +33,7 @@ const ContactPage = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-900 mb-1">Email Us</h4>
-                                        <p className="text-gray-600">hello@squareglass.app</p>
+                                        <p className="text-gray-600">gandhivatechnologies@gmail.com</p>
                                     </div>
                                 </div>
 
@@ -43,7 +43,7 @@ const ContactPage = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-900 mb-1">Call Us</h4>
-                                        <p className="text-gray-600">+91-XXXXX-XXXXX</p>
+                                        <p className="text-gray-600">+91 83038 07051</p>
                                     </div>
                                 </div>
 
@@ -53,7 +53,7 @@ const ContactPage = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-gray-900 mb-1">Visit Us</h4>
-                                        <p className="text-gray-600">DLF Phase 3, Gurgaon, Haryana, India</p>
+                                        <p className="text-gray-600">Thane, Mumbai, Maharashtra, 400604</p>
                                     </div>
                                 </div>
                             </div>

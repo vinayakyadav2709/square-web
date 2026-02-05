@@ -15,7 +15,7 @@ const DemoSection = () => {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-bold text-gray-900 mb-4"
                     >
-                        See Square Glass in Action
+                        See कारोbaar in Action
                     </motion.h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                         Experience the simplicity of modern accounting.

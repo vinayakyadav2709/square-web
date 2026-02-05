@@ -6,6 +6,7 @@ import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { APP_LINKS } from "@/constants/links";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +21,7 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: "Features", href: "#features" },
-        { name: "Pricing", href: "#pricing" },
+        { name: "Features", href: "/features" },
         { name: "About", href: "/about" },
         { name: "Contact", href: "/contact" },
     ];
@@ -39,8 +39,8 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="text-2xl font-bold text-primary flex items-center gap-2">
-                            <span className="bg-primary text-white p-1 rounded-lg">SQ</span>
-                            <span>Square Glass</span>
+                            <span className="bg-primary text-white p-1 rounded-lg">KB</span>
+                            <span>कारोbaar</span>
                         </Link>
                     </div>
 
@@ -55,10 +55,12 @@ const Navbar = () => {
                                 {link.name}
                             </Link>
                         ))}
-                        <Button size="sm" className="bg-primary hover:bg-primary/90 text-white gap-2 font-semibold">
-                            <Download className="w-4 h-4" />
-                            Download Now
-                        </Button>
+                        <Link href={APP_LINKS.PLAY_STORE} target="_blank">
+                            <Button size="sm" className="bg-primary hover:bg-primary/90 text-white gap-2 font-semibold">
+                                <Download className="w-4 h-4" />
+                                Download Now
+                            </Button>
+                        </Link>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -94,10 +96,12 @@ const Navbar = () => {
                                 </Link>
                             ))}
                             <div className="pt-4 px-3">
-                                <Button className="w-full bg-primary hover:bg-primary/90 text-white gap-2 font-semibold py-6">
-                                    <Download className="w-5 h-5" />
-                                    Download Now
-                                </Button>
+                                <Link href={APP_LINKS.PLAY_STORE} target="_blank" onClick={() => setIsOpen(false)}>
+                                    <Button className="w-full bg-primary hover:bg-primary/90 text-white gap-2 font-semibold py-6">
+                                        <Download className="w-5 h-5" />
+                                        Download Now
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </motion.div>

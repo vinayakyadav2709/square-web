@@ -46,8 +46,8 @@ const ProblemSection = () => {
                         transition={{ delay: 0.1 }}
                         className="text-xl text-gray-600 max-w-3xl mx-auto"
                     >
-                        The glass industry has unique needs that standard software simply ignores.
-                        We built Square Glass to solve these specific headaches.
+                        The wholesale industry has unique needs that standard software simply ignores.
+                        We built कारोbaar to solve these specific headaches.
                     </motion.p>
                 </div>
 

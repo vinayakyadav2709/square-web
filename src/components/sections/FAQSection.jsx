@@ -12,7 +12,7 @@ import {
 const faqs = [
     {
         question: "What unit systems are supported?",
-        answer: "Square Glass is specially designed for the glass industry. It fully supports Master Units (1/16 inch), SUT units, and metric systems. You can switch between them seamlessly.",
+        answer: "कारोbaar is specially designed for the wholesale industry. It fully supports Master Units (1/16 inch), SUT units, and metric systems. You can switch between them seamlessly.",
     },
     {
         question: "Is the app GST compliant?",
@@ -20,7 +20,7 @@ const faqs = [
     },
     {
         question: "Does it work offline?",
-        answer: "Yes! Square Glass is built with a local-first architecture. You can create invoices, manage stock, and perform all core business tasks without an active internet connection. Data syncs automatically once you go online.",
+        answer: "Yes! कारोbaar is built with a local-first architecture. You can create invoices, manage stock, and perform all core business tasks without an active internet connection. Data syncs automatically once you go online.",
     },
     {
         question: "Is it available for both Android and iOS?",
@@ -58,7 +58,7 @@ const FAQSection = () => {
                         Frequently Asked Questions
                     </motion.h2>
                     <p className="text-xl text-gray-600">
-                        Everything you need to know about Square Glass and how it can help your business.
+                        Everything you need to know about कारोbaar and how it can help your business.
                     </p>
                 </div>
 

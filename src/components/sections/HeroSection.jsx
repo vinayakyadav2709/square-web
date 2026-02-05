@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Play, Download, ArrowRight } from "lucide-react";
 import { AnimatedGrid } from "@/components/aceternity/AnimatedGrid";
 import { TypingAnimation } from "@/components/aceternity/TypingAnimation";
+import { APP_LINKS } from "@/constants/links";
 
 const HeroSection = () => {
     return (
@@ -22,7 +23,7 @@ const HeroSection = () => {
                             transition={{ duration: 0.5 }}
                         >
                             <TypingAnimation
-                                text="Modern Accounting for Glass Wholesalers"
+                                text="Modern Accounting for Wholesalers with कारोbaar"
                                 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6"
                             />
 
@@ -34,7 +35,7 @@ const HeroSection = () => {
                                 <Button
                                     size="lg"
                                     className="bg-primary hover:bg-primary/90 text-white text-lg h-14 px-8 rounded-xl shadow-lg shadow-primary/25 gap-2 font-bold"
-                                    onClick={() => window.open("https://play.google.com/store/apps/details?id=com.squareglass.app", "_blank")}
+                                    onClick={() => window.open(APP_LINKS.PLAY_STORE, "_blank")}
                                 >
                                     <Download className="w-5 h-5" />
                                     Download Android App
@@ -80,9 +81,9 @@ const HeroSection = () => {
                             {/* Screen Content Placeholder */}
                             <div className="absolute inset-0 bg-primary/5 flex flex-col items-center justify-center p-6 text-center">
                                 <div className="w-12 h-12 bg-primary rounded-xl mb-4 flex items-center justify-center">
-                                    <span className="text-white font-bold">SQ</span>
+                                    <span className="text-white font-bold">KB</span>
                                 </div>
-                                <h3 className="text-gray-900 font-bold mb-2 text-xl">Square Glass App</h3>
+                                <h3 className="text-gray-900 font-bold mb-2 text-xl">कारोbaar App</h3>
                                 <p className="text-gray-500 text-sm">GST Invoice Generated Successfully!</p>
                                 <div className="w-full h-40 bg-white rounded-lg mt-6 border border-gray-100 shadow-sm" />
                                 <div className="w-full h-20 bg-primary/10 rounded-lg mt-4" />

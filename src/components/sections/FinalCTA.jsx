@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download, ArrowRight, MessageSquare } from "lucide-react";
 import Link from "next/link";
+import { APP_LINKS } from "@/constants/links";
 
 const FinalCTA = () => {
     return (
@@ -22,14 +23,14 @@ const FinalCTA = () => {
                         Ready to transform your glass business?
                     </h2>
                     <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 max-w-2xl mx-auto font-medium">
-                        Join 500+ wholesalers who are saving time and reducing errors with Square Glass.
+                        Join 500+ wholesalers who are saving time and reducing errors with कारोbaar.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                         <Button
                             size="lg"
                             className="bg-white text-primary hover:bg-gray-100 text-xl h-16 px-10 rounded-2xl shadow-2xl shadow-black/20 gap-3 font-bold w-full sm:w-auto"
-                            onClick={() => window.open("https://play.google.com/store/apps/details?id=com.squareglass.app", "_blank")}
+                            onClick={() => window.open(APP_LINKS.PLAY_STORE, "_blank")}
                         >
                             <Download className="w-6 h-6" />
                             Get it on Play Store
