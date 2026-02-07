@@ -1,32 +1,12 @@
 pipeline {
-    agent {
-        // This tells Jenkins to run the whole pipeline inside a Docker container
-        docker { 
-            image 'node:20-alpine' 
-            args '-u root' // Ensures permission to write to the workspace
-        }
-    }
-
+    agent any // This is the mandatory definition at the top
+    
     stages {
-        stage('Install') {
+        stage('Run Node Test') {
             steps {
-                echo 'Installing dependencies inside container...'
-                sh 'npm ci' 
+                // Now you run your specific node version inside a container via shell
+                sh 'docker run --rm node:24.13.0-alpine3.23 node --eval "console.log(process.platform,process.env.CI)"'
             }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Running Next.js build...'
-                // Next.js build output will be saved to the .next folder in your workspace
-                sh 'npm run build'
-            }
-        }
-    }
-
-    post {
-        success {
-            echo 'Build complete! Your .next folder is ready.'
         }
     }
 }
