@@ -1,39 +1,32 @@
 pipeline {
-    agent any
+    agent {
+        // This tells Jenkins to run the whole pipeline inside a Docker container
+        docker { 
+            image 'node:20-alpine' 
+            args '-u root' // Ensures permission to write to the workspace
+        }
+    }
 
     stages {
-        stage('Cleanup') {
+        stage('Install') {
             steps {
-                echo 'Cleaning workspace...'
-                deleteDir() // Starts fresh every time
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                echo 'Installing npm packages...'
-                // --frozen-lockfile is faster and more reliable for CI
+                echo 'Installing dependencies inside container...'
                 sh 'npm ci' 
             }
         }
 
-        stage('Next.js Build') {
+        stage('Build') {
             steps {
-                echo 'Running npm run build...'
+                echo 'Running Next.js build...'
+                // Next.js build output will be saved to the .next folder in your workspace
                 sh 'npm run build'
             }
         }
     }
 
     post {
-        always {
-            echo 'Build attempt finished.'
-        }
         success {
-            echo 'Next.js site compiled successfully!'
-        }
-        failure {
-            echo 'Build failed. Check the logs above for syntax or type errors.'
+            echo 'Build complete! Your .next folder is ready.'
         }
     }
 }
