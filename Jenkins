@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Cleanup') {
+            steps {
+                echo 'Cleaning workspace...'
+                deleteDir() // Starts fresh every time
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                echo 'Installing npm packages...'
+                // --frozen-lockfile is faster and more reliable for CI
+                sh 'npm ci' 
+            }
+        }
+
+        stage('Next.js Build') {
+            steps {
+                echo 'Running npm run build...'
+                sh 'npm run build'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Build attempt finished.'
+        }
+        success {
+            echo 'Next.js site compiled successfully!'
+        }
+        failure {
+            echo 'Build failed. Check the logs above for syntax or type errors.'
+        }
+    }
+}
